@@ -1,20 +1,18 @@
-async function animalesApi(){
-    let resultado;
-    try{
-        let promesa = await fetch('http://127.0.0.1:5500/animales.json')
-        let resultado = await promesa.json()
-        console.log(resultado)
+const animalesApi = (() => {
+
+    const url = "http://127.0.0.1:5500/animales.json";
+    const getData = async () => {
+
+        const res = await fetch(url);
+        const data = await res.json();
+        
+        console.log(data);
+        return data;
+
     }
-    catch(error){
-        console.log(error);
-        resultado =null
-    }
-    return resultado;
-}
- animalesApi()
 
- console.log(animalesApi);
-
-
+    return { getData };
+})();
+ 
 export default animalesApi
 
