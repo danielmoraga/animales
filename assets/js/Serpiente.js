@@ -4,8 +4,9 @@ class Serpiente extends Animal{
     super(nombre,edad, img, comentarios, sonido)
     }
     sisear() {
-        let siseo = this.sonido;
-        return siseo
+        let audioPlayer = document.getElementById("player") 
+        audioPlayer.src =`assets/sounds/${this.sonido}`
+        audioPlayer.play()
     }
 }
 

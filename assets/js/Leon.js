@@ -4,7 +4,9 @@ class Leon extends Animal{
     super(nombre,edad, img, comentarios, sonido)
     }
     rugir() {
-        console.log("sonido");
+        let audioPlayer = document.getElementById("player") 
+        audioPlayer.src =`assets/sounds/${this.sonido}`
+        audioPlayer.play()
     }
 }
 

@@ -4,7 +4,9 @@ class Lobo extends Animal{
         super(nombre,edad, img, comentarios, sonido)
     }
     aullar() {
-        console.log("sonido");
+        let audioPlayer = document.getElementById("player") 
+        audioPlayer.src =`assets/sounds/${this.sonido}`
+        audioPlayer.play()
     }
 }
 

@@ -42,6 +42,10 @@ body {
   max-width: 30%;
 }
 
+.boton{
+  width: 100% !important;
+}
+
 /* Modal */
 
 .modal-dialog{

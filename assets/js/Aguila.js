@@ -4,13 +4,11 @@ class Aguila extends Animal{
     super(nombre,edad, img, comentarios, sonido)
     }
     chillar() {
-        console.log("sonido");
+        let audioPlayer = document.getElementById("player") 
+        audioPlayer.src =`assets/sounds/${this.sonido}`
+        audioPlayer.play()
     }
 }
-
-let nombreEspecie = document.getElementById("animal").value;
-let edadEspecie = document.getElementById("edad").value;
-let comentarioEspecie = document.getElementById("comentarios").value;
 
 export default Aguila
 

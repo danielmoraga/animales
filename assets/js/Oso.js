@@ -3,8 +3,10 @@ class Oso extends Animal{
     constructor(nombre,edad, img, comentarios, sonido){
     super(nombre,edad, img, comentarios, sonido)
     }
-    Gruñir() {
-        console.log("sonido");
+    grunir() {
+        let audioPlayer = document.getElementById("player") 
+        audioPlayer.src =`assets/sounds/${this.sonido}`
+        audioPlayer.play()
     }
 }
 
